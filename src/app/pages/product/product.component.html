@@ -1,0 +1,418 @@
+
+<div *ngIf="product" >
+    <!-- <div class="product-page-container">
+
+                   <ol class="product-breadcrumbs">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item"> / <a routerLink="/">Plates</a></li>
+            <li class="breadcrumb-item"> / {{product.title}}</li>
+        </ol>
+
+
+        <div  class="row">
+            <div class="col-md-8">  
+              <div class="product-details-image" [ngStyle]="{'background-image': 'url(./assets/imgs/' + product.image + ')'}"></div>
+
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-details-row">
+                    <div class="product-brand">{{product.brand}}</div>
+                    <h1 class="product-title">{{product.title}}</h1>
+                    <div class="product-price">{{product.price | currency :'INR':true }}</div>
+                    <div class="product-description">{{product.description}}</div>
+                </div>
+                <div class="product-details-button">
+                    <quantity-control [quantity]="quantity" (onChange)="changeQuantity($event)"></quantity-control>
+                    <div class="product-cart-button button button-primary button-large" (click)="addToCart(product)">Add to cart</div>
+                </div>
+
+
+
+        </div>
+    </div> -->
+<!-- 
+    <div class="container-fluid mt-2 mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-5 pr-2">
+                <div class="card">
+                    <div class="demo">
+                        <ul id="lightSlider">
+                            <li data-thumb="https://i.imgur.com/KZpuufK.jpg"> <img src="https://i.imgur.com/KZpuufK.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/GwiUmQA.jpg"> <img src="https://i.imgur.com/GwiUmQA.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/DhKkTrG.jpg"> <img src="https://i.imgur.com/DhKkTrG.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/kYWqL7k.jpg"> <img src="https://i.imgur.com/kYWqL7k.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/c9uUysL.jpg"> <img src="https://i.imgur.com/c9uUysL.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/KZpuufK.jpg"> <img src="https://i.imgur.com/KZpuufK.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/GwiUmQA.jpg"> <img src="https://i.imgur.com/GwiUmQA.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/DhKkTrG.jpg"> <img src="https://i.imgur.com/DhKkTrG.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/kYWqL7k.jpg"> <img src="https://i.imgur.com/kYWqL7k.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/c9uUysL.jpg"> <img src="https://i.imgur.com/c9uUysL.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/KZpuufK.jpg"> <img src="https://i.imgur.com/KZpuufK.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/GwiUmQA.jpg"> <img src="https://i.imgur.com/GwiUmQA.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/DhKkTrG.jpg"> <img src="https://i.imgur.com/DhKkTrG.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/kYWqL7k.jpg"> <img src="https://i.imgur.com/kYWqL7k.jpg" /> </li>
+                            <li data-thumb="https://i.imgur.com/c9uUysL.jpg"> <img src="https://i.imgur.com/c9uUysL.jpg" /> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-2">
+                    <h6>Reviews</h6>
+                    <div class="d-flex flex-row">
+                        <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span class="ml-1 font-weight-bold">4.6</span>
+                    </div>
+                    <hr>
+                    <div class="badges"> <span class="badge bg-dark ">All (230)</span> <span class="badge bg-dark "> <i class="fa fa-image"></i> 23 </span> <span class="badge bg-dark "> <i class="fa fa-comments-o"></i> 23 </span> <span class="badge bg-warning"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="ml-1">2,123</span> </span> </div>
+                    <hr>
+                    <div class="comment-section">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center"> <img src="https://i.imgur.com/o5uMfKo.jpg" class="rounded-circle profile-image">
+                                <div class="d-flex flex-column ml-1 comment-profile">
+                                    <div class="comment-ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span class="username">Lori Benneth</span>
+                                </div>
+                            </div>
+                            <div class="date"> <span class="text-muted">2 May</span> </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center"> <img src="https://i.imgur.com/tmdHXOY.jpg" class="rounded-circle profile-image">
+                                <div class="d-flex flex-column ml-1 comment-profile">
+                                    <div class="comment-ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span class="username">Timona Simaung</span>
+                                </div>
+                            </div>
+                            <div class="date"> <span class="text-muted">12 May</span> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="card">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="p-ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span class="ml-1">5.0</span>
+                    </div>
+                    <div class="about"> <span class="font-weight-bold">IKEA x HAY Ypperlig Collection </span>
+                        <h4 class="font-weight-bold">$3,444</h4>
+                    </div>
+                    <div class="buttons"> <button class="btn btn-outline-warning btn-long cart">Add to Cart</button> <button class="btn btn-warning btn-long buy">Buy it Now</button> <button class="btn btn-light wishlist"> <i class="fa fa-heart"></i> </button> </div>
+                    <hr>
+                    <div class="product-description">
+                        <div><span class="font-weight-bold">Color:</span><span> blue</span></div>
+                        <div class="my-color"> <label class="radio"> <input type="radio" name="gender" value="MALE" checked> <span class="red"></span> </label> <label class="radio"> <input type="radio" name="gender" value="FEMALE"> <span class="blue"></span> </label> <label class="radio"> <input type="radio" name="gender" value="FEMALE"> <span class="green"></span> </label> <label class="radio"> <input type="radio" name="gender" value="FEMALE"> <span class="orange"></span> </label> </div>
+                        <div class="d-flex flex-row align-items-center"> <i class="fa fa-calendar-check-o"></i> <span class="ml-1">Delivery from sweden, 15-45 days</span> </div>
+                        <div class="mt-2"> <span class="font-weight-bold">Description</span>
+                            <p>The minimalist collaboration features chairs, lightening, Shelves, Sofas, Desks and various home accessories, all offering form and function at the same point.We use high-strength clamps and joinery techniques specially designed for engineered wood beds. Ergo, no irksome creaks - and you can sleep like a baby, well into adulthood!</p>
+                            <div class="bullets">
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">Best in Quality</span> </div>
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">Anti-creak joinery</span> </div>
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">Sturdy laminate surfaces</span> </div>
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">Relocation friendly design</span> </div>
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">High gloss, high style</span> </div>
+                                <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">Easy-access hydraulic storage</span> </div>
+                            </div>
+                        </div>
+                        <div class="mt-2"> <span class="font-weight-bold">Store</span> </div>
+                        <div class="d-flex flex-row align-items-center"> <img src="https://i.imgur.com/N2fYgvD.png" class="rounded-circle store-image">
+                            <div class="d-flex flex-column ml-1 comment-profile">
+                                <div class="comment-ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span class="username">Rare Boutique</span> <small class="followers">25K Followers</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-2"> <span>Similar items:</span>
+                    <div class="similar-products mt-2 d-flex flex-row">
+                        <div class="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="https://i.imgur.com/KZpuufK.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title">$1,999</h6>
+                            </div>
+                        </div>
+                        <div class="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="https://i.imgur.com/GwiUmQA.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title">$1,699</h6>
+                            </div>
+                        </div>
+                        <div class="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="https://i.imgur.com/c9uUysL.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title">$2,999</h6>
+                            </div>
+                        </div>
+                        <div class="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="https://i.imgur.com/kYWqL7k.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title">$3,999</h6>
+                            </div>
+                        </div>
+                        <div class="card border p-1" style="width: 9rem;"> <img src="https://i.imgur.com/DhKkTrG.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title">$999</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="container-fluid mt-2 mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-5 pr-2">
+            <div class="card">
+                <div class="demo">
+                    <ul id="lightSlider">
+                        <li data-thumb="https://i.imgur.com/KZpuufK.jpg"> <img src="https://i.imgur.com/KZpuufK.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/GwiUmQA.jpg"> <img src="https://i.imgur.com/GwiUmQA.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/DhKkTrG.jpg"> <img src="https://i.imgur.com/DhKkTrG.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/kYWqL7k.jpg"> <img src="https://i.imgur.com/kYWqL7k.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/c9uUysL.jpg"> <img src="https://i.imgur.com/c9uUysL.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/KZpuufK.jpg"> <img src="https://i.imgur.com/KZpuufK.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/GwiUmQA.jpg"> <img src="https://i.imgur.com/GwiUmQA.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/DhKkTrG.jpg"> <img src="https://i.imgur.com/DhKkTrG.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/kYWqL7k.jpg"> <img src="https://i.imgur.com/kYWqL7k.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/c9uUysL.jpg"> <img src="https://i.imgur.com/c9uUysL.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/KZpuufK.jpg"> <img src="https://i.imgur.com/KZpuufK.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/GwiUmQA.jpg"> <img src="https://i.imgur.com/GwiUmQA.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/DhKkTrG.jpg"> <img src="https://i.imgur.com/DhKkTrG.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/kYWqL7k.jpg"> <img src="https://i.imgur.com/kYWqL7k.jpg" /> </li>
+                        <li data-thumb="https://i.imgur.com/c9uUysL.jpg"> <img src="https://i.imgur.com/c9uUysL.jpg" /> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <h6>Reviews</h6>
+                <div class="d-flex flex-row">
+                    <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span class="ml-1 font-weight-bold">4.6</span>
+                </div>
+                <hr>
+                <div class="badges"> <span class="badge bg-dark ">All (230)</span> <span class="badge bg-dark "> <i class="fa fa-image"></i> 23 </span> <span class="badge bg-dark "> <i class="fa fa-comments-o"></i> 23 </span> <span class="badge bg-warning"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="ml-1">2,123</span> </span> </div>
+                <hr>
+                <div class="comment-section">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-row align-items-center"> <img src="https://i.imgur.com/o5uMfKo.jpg" class="rounded-circle profile-image">
+                            <div class="d-flex flex-column ml-1 comment-profile">
+                                <div class="comment-ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span class="username">Lori Benneth</span>
+                            </div>
+                        </div>
+                        <div class="date"> <span class="text-muted">2 May</span> </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-row align-items-center"> <img src="https://i.imgur.com/tmdHXOY.jpg" class="rounded-circle profile-image">
+                            <div class="d-flex flex-column ml-1 comment-profile">
+                                <div class="comment-ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span class="username">Timona Simaung</span>
+                            </div>
+                        </div>
+                        <div class="date"> <span class="text-muted">12 May</span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="card">
+                <div class="d-flex flex-row align-items-center">
+                    <div class="p-ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span class="ml-1">5.0</span>
+                </div>
+                <div class="about"> <span class="font-weight-bold">IKEA x HAY Ypperlig Collection </span>
+                    <h4 class="font-weight-bold">$3,444</h4>
+                </div>
+                <div class="buttons"> <button class="btn btn-outline-warning btn-long cart">Add to Cart</button> <button class="btn btn-warning btn-long buy">Buy it Now</button> <button class="btn btn-light wishlist"> <i class="fa fa-heart"></i> </button> </div>
+                <hr>
+                <div class="product-description">
+                    <div><span class="font-weight-bold">Color:</span><span> blue</span></div>
+                    <div class="my-color"> <label class="radio"> <input type="radio" name="gender" value="MALE" checked> <span class="red"></span> </label> <label class="radio"> <input type="radio" name="gender" value="FEMALE"> <span class="blue"></span> </label> <label class="radio"> <input type="radio" name="gender" value="FEMALE"> <span class="green"></span> </label> <label class="radio"> <input type="radio" name="gender" value="FEMALE"> <span class="orange"></span> </label> </div>
+                    <div class="d-flex flex-row align-items-center"> <i class="fa fa-calendar-check-o"></i> <span class="ml-1">Delivery from sweden, 15-45 days</span> </div>
+                    <div class="mt-2"> <span class="font-weight-bold">Description</span>
+                        <p>The minimalist collaboration features chairs, lightening, Shelves, Sofas, Desks and various home accessories, all offering form and function at the same point.We use high-strength clamps and joinery techniques specially designed for engineered wood beds. Ergo, no irksome creaks - and you can sleep like a baby, well into adulthood!</p>
+                        <div class="bullets">
+                            <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">Best in Quality</span> </div>
+                            <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">Anti-creak joinery</span> </div>
+                            <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">Sturdy laminate surfaces</span> </div>
+                            <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">Relocation friendly design</span> </div>
+                            <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">High gloss, high style</span> </div>
+                            <div class="d-flex align-items-center"> <span class="dot"></span> <span class="bullet-text">Easy-access hydraulic storage</span> </div>
+                        </div>
+                    </div>
+                    <div class="mt-2"> <span class="font-weight-bold">Store</span> </div>
+                    <div class="d-flex flex-row align-items-center"> <img src="https://i.imgur.com/N2fYgvD.png" class="rounded-circle store-image">
+                        <div class="d-flex flex-column ml-1 comment-profile">
+                            <div class="comment-ratings"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> <span class="username">Rare Boutique</span> <small class="followers">25K Followers</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-2"> <span>Similar items:</span>
+                <div class="similar-products mt-2 d-flex flex-row">
+                    <div class="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="https://i.imgur.com/KZpuufK.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title">$1,999</h6>
+                        </div>
+                    </div>
+                    <div class="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="https://i.imgur.com/GwiUmQA.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title">$1,699</h6>
+                        </div>
+                    </div>
+                    <div class="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="https://i.imgur.com/c9uUysL.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title">$2,999</h6>
+                        </div>
+                    </div>
+                    <div class="card border p-1" style="width: 9rem;margin-right: 3px;"> <img src="https://i.imgur.com/kYWqL7k.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title">$3,999</h6>
+                        </div>
+                    </div>
+                    <div class="card border p-1" style="width: 9rem;"> <img src="https://i.imgur.com/DhKkTrG.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title">$999</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+	 <div class="container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+						
+						<!-- <div class="preview-pic tab-content">
+						  <div class="tab-pane active" id="pic-1"><img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg" /></div>
+						  <div class="tab-pane" id="pic-2"><img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg" /></div>
+						  <div class="tab-pane" id="pic-3"><img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg" /></div>
+						  <div class="tab-pane" id="pic-4"><img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg" /></div>
+						  <div class="tab-pane" id="pic-5"><img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg" /></div>
+                          <div class="tab-pane" id="pic-6"><img src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg" /></div>
+
+                        </div> -->
+                        <ul class="preview-pic tab-content">
+                            <li class="tab-pane active" id="pic-1"><img src="../../../assets/imgs/pot-4.jpg" /></li>
+                            <li class="tab-pane" id="pic-2"><img src="../../../assets/imgs/pot-1.jpg" /></li>
+                            <li class="tab-pane" id="pic-3"><img src="../../../assets/imgs/pot-2.jpg" /></li>
+                            <li class="tab-pane" id="pic-4"><img src="../../../assets/imgs/pot3.jpg" /></li>
+                            <!-- <li class="tab-pane" id="pic-5"><img src="../../../assets/imgs/potdetails-4.jpg" /></li> -->
+                            <!-- <li class="tab-pane" id="pic-6"><img src="../../../assets/imgs/potdetails-6.jpg" /></li> -->
+  
+                        </ul>
+						<ul class="preview-thumbnail nav nav-tabs">
+						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../../../assets/imgs/pot-4.jpg" /></a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab"><img src="../../../assets/imgs/pot-1.jpg" /></a></li>
+						  <li><a data-target="#pic-3" data-toggle="tab"><img src="../../../assets/imgs/pot-2.jpg" /></a></li>
+						  <li><a data-target="#pic-4" data-toggle="tab"><img src="../../../assets/imgs/pot-3.jpg" /></a></li>
+						  <!-- <li><a data-target="#pic-5" data-toggle="tab"><img src="../../../assets/imgs/potdetails-4.jpg" /></a></li> -->
+                        
+
+                        </ul>
+						
+					</div>
+					<div class="details col-md-6">
+						<h3 class="product-title">{{product.title}}</h3>
+						<div class="rating">
+							<div class="stars">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<span class="review-no">41 reviews</span>
+						</div>
+						<p class="product-description">{{product.description}}</p>
+						current price:<h4 class="price"> 5000 Rupees</h4>
+						<p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+						<h5 class="sizes">sizes:
+							<span class="size" data-toggle="tooltip" title="small">s</span>
+							<span class="size" data-toggle="tooltip" title="medium">m</span>
+							<span class="size" data-toggle="tooltip" title="large">l</span>
+							<span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+						</h5>
+						<!-- <h5 class="colors">colors:
+							<span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
+							<span class="color green"></span>
+							<span class="color blue"></span>
+						</h5> -->
+						<!-- <div class="action">
+							<button class="add-to-cart btn btn-default" type="button">add to cart</button>
+							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+						</div> -->
+                        <div class="product-details-button">
+                          <div>  <quantity-control [quantity]="quantity" (onChange)="changeQuantity($event)"></quantity-control></div>
+                            <div class="product-cart-button button button-primary button-large" (click)="addToCart(product)">Add to cart</div>
+                        </div>
+					</div>
+				</div>
+                <div> <table>
+                    <tr><td><h3 style="
+                    border-left-width: 300px;
+                    padding-left: 156px;
+                ">Our Artisian</h3></td>
+          <td>  <h3 style="
+            border-left-width: 400px;
+            padding-left: 376px;
+        ">NOTES FOR YOU</h3>    </td>
+       </tr> </table>
+            </div>
+                <div class="wrapper row" style="margin-top:30 pc;">
+
+                    <div class="preview col-md-6">
+						<img src="../../../assets/imgs/artisian-1-5.jpg" style="
+                        padding-top: 53px;
+                    " />
+					</div>
+                    <div class="details col-md-6">
+                        <ul>
+                            <li>
+                              <h4>Wash Care</h4>
+                              
+                              <p>Cotton Apparel - Hand wash separately. Silk &amp; Madhubani - Dry clean only. Baskets &amp; Show Pieces - Clean with a wet cloth. For any other product - Please find the wash care in the product description.</p>
+                                  
+                                  
+                            </li>
+                            <li>
+                              <h4>Shipping</h4>
+                              <p>Free shipping within India on orders valued above INR 4999. Shipping out of India is as per weight calculation at checkout.</p>
+                              <p>Country of Origin - India</p>
+                            </li>
+                            <li>
+                              <h4>Gift Wrap Available</h4>
+                              <p>To gift wrap order, select the gift wrap check box on the cart page during checkout</p>
+                            </li>
+                            <li>
+                              <h4>30 Days Free Return</h4>
+                              <p>Okhai Apparels - 30 Days Free Return.  On SALE - No Return Refund. Please Note - Custom Made Handicrafts - No Returns No Refund as mentioned in the product description.</p>
+                            </li>
+                            <li>
+                              <h4>Estimated Delivery Time</h4>
+                              <p>Okhai Apparel - 4-6 Working Days. Custom Handicrafts - 15 to 30 days as artisans make it after they receive the order.</p>
+                            </li>
+                            <li>
+                              <h4>Colors</h4>
+                              <p>The colours seen in the image may vary from the actual product due to different computer screen resolutions and displays. Dark colours may look lighter in direct sunlight.</p>
+                            </li>
+                            </ul>
+                </div>
+			</div>
+            <div><h3>Product Details</h3></div>
+            <div id="collapse-tab1" class="tab-pane fade in active"><p>The ultimate source of hope, this macram̩ tree of life wall hanging brings alive your walls with its beauty. It is knotted with love and gathers instant appreciation from onlookers. Embellish your dining space with this piece of beauty or add an element of grace to your living space.</p>
+                <p>Craft : Macram̩ Colour : Off-white </p><p>Measurements : Ring Diameter - 9" Product </p><p>weight : 300 grams </p><p>Special Attention : Handcrafted, Please Allow For Minor Crafting Variation. </p><p>Shipping Info : Dispatched in a maximum of 7-21 business days. Returns accepted within 12 days of delivery</p></div>
+		</div>
+	</div> 
+
+</div>
+
+
+
+
+
+ 
+<!-- <div class="lightbox-end">
+    <hr style="width:100%; border-top: 2px solid rgb(255, 255, 255);">
+    <div><img  src="../../../assets/imgs/logo.png" decoding="async" style="align-self: flex-start;padding-right: 200px;"></div>
+<div style="padding-top: 80px;font-family: Montserrat;">For any help, Visit FAQs or Contact Us</div>
+
+<div><img  src="../../../assets/imgs/phone.png" decoding="async" style="width: 40px;"><span style="padding-left: 30px;">9021467250</span></div>
+<div><table><tr><td><a href="/productlisting"><img  src="../../../assets/imgs/facebooklogo.png" decoding="async" style="width: 50px; margin-left: 1000px;"></a></td>
+<td><a href="/productlisting"><img  src="../../../assets/imgs/instagramlogo.png" decoding="async" style="width: 50px; margin-left:40px;"></a></td>
+<td><a href="/productlisting"><img  src="../../../assets/imgs/twitter.png" decoding="async" style="width: 50px; margin-left:40px;"></a></td>
+</tr></table></div>
+<hr style="width:100%; border-top: 2px solid rgb(255, 255, 255);">
+</div> -->

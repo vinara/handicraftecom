@@ -1,0 +1,169 @@
+<!-- <div class="cart-page-container">
+    <div class="cart-page-header">
+        <h1>Order  Confirmation</h1>
+    </div>
+     <table>
+        
+    <div class="cart-page-content" style="margin-left: 250px;"  *ngIf="cartList.length > 0">
+        <tr>
+        <div class="cart-item-header cart-item-row">
+           
+               
+                    <td> <div class="cart-item-cell cart-item-product"><span><h3>Product</h3></span></div></td>
+                    <td> <div class="cart-item-cell cart-item-quantity" style="margin-left: 110px;"><span><h3>Quantity</h3></span></div></td>
+                    <td><div class="cart-item-cell cart-item-total" style="margin-left: 150px;"><span><h3>Total</h3></span></div></td>
+                   
+                
+           
+            
+            
+        </div>
+        </tr>
+        <tr>
+        <div class="cart-item-row" *ngFor="let cart of cartList;let i = index">
+            
+                
+                    <td>
+            <div class="cart-item-cell cart-item-product">
+               
+                
+              <div class="cart-item-info">
+                    <div class="cart-item-brand"><h5>{{cart.product.brand}}</h5></div>
+                    <div class="cart-item-title"><h5>{{cart.product.title}}</h5></div>
+                    <br>
+                    
+                </div>
+            
+            </div>
+          </td> 
+            <td>
+            <div class="cart-item-cell cart-item-quantity" style="margin-left: 60px;">
+                <div class="item-price"><h5>{{cart.quantity}}</h5></div>
+            </div>
+          </td>
+          <td>
+            <div class="cart-item-cell cart-item-total" style="margin-left: 190px;">
+                <div class="item-price">
+                <h5> {{cart.quantity*cart.product.price | currency :'INR':true }}</h5>
+                </div>
+            </div>
+            </td>
+        </div>
+        </tr>
+           
+    </div>
+        </table>
+        <hr style="width:100%; border-top: 2px solid rgb(116, 111, 111);">
+        <div class="row cart-total">
+            <div class="col-lg-offset-6">
+                <div class="cart-total-row row">
+                    <div class="col-md-6 cart-total-label">
+                    <h4> Cart overview</h4>
+                    </div>
+                    <div class="col-md-6 cart-total-value"></div>
+                </div>
+                <div class="cart-total-row row">
+                    <div class="col-md-6 cart-total-label">
+                    <h4>    subtotal</h4>
+                    </div>
+                    <div class="col-md-6 cart-total-value">
+                     <h5>  {{totalPrice | currency :'INR':true}}</h5> 
+                    </div>
+                </div>
+                <div class="cart-total-row row">
+                    <div class="col-md-6 cart-total-label">
+                   <h4>     total</h4>
+                    </div>
+                    <div class="col-md-6 cart-total-value cart-total-price">
+                 <h5>       {{totalPrice | currency :'INR':true}} AUD </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-buttons">
+            <div style="margin-left: 65pc;"><a href="/productlisting" class="checkout-button button button-primary button-large">PAYMENT ({{totalPrice | currency :'INR':true}})</a></div>
+            
+     
+        </div>
+   
+    <div class="cart-page-content" *ngIf="cartList.length == 0">
+        <h4>Your cart is empty.</h4>
+        <a routerLink="/">Go shopping</a>
+    </div>
+</div> -->
+<div class="cart-page-container">
+    <div class="cart-page-header">
+        <h1>Address Details</h1>
+    </div>
+    <div class="cart-page-header">
+        <h3>Mr Test User</h3>
+        <h4>ABC 123 Appartment , near avenue building , mumbai 121212</h4>
+    </div>
+    <div class="cart-page-content" *ngIf="cartList.length > 0">
+        <!-- <div class="cart-item-header cart-item-row">
+            <div class="cart-item-cell cart-item-product"><span>Product</span></div>
+            <div class="cart-item-cell cart-item-quantity"><span>Quantity</span></div>
+            <div class="cart-item-cell cart-item-total"><span>Total</span></div>
+            <div class="cart-item-cell cart-item-action"><span>Action</span></div>
+        </div> -->
+        <!-- <div class="cart-item-row" *ngFor="let cart of cartList;let i = index">
+            <div class="cart-item-cell cart-item-product">
+                <div class="cart-item-thumbnail" [ngStyle]="{'background-image': 'url(./assets/imgs/mashiko-yaki-indigo-small-plate.jpg)'}">
+                </div>
+                <div class="cart-item-info">
+                    <div class="cart-item-brand">{{cart.product.brand}}</div>
+                    <div class="cart-item-title">{{cart.product.title}}</div>
+                </div>
+            </div>
+            <div class="cart-item-cell cart-item-quantity">
+                <quantity-control [quantity]="cart.quantity" (onChange)="changeQuantity(cart,$event)"></quantity-control>
+            </div>
+            <div class="cart-item-cell cart-item-total">
+                <div class="item-price">
+                    {{cart.quantity*cart.product.price | currency :'INR':true }}
+                </div>
+            </div>
+            <div class="cart-item-cell cart-item-action">
+                <div class="item-remove" (click)="removeFromCart(i)">X</div>
+            </div>
+        </div> -->
+        <!-- <div class="row cart-total">
+            <div class="col-lg-offset-6">
+                <div class="cart-total-row row">
+                    <div class="col-md-6 cart-total-label">
+                        Cart overview
+                    </div>
+                    <div class="col-md-6 cart-total-value"></div>
+                </div>
+                <div class="cart-total-row row">
+                    <div class="col-md-6 cart-total-label">
+                        subtotal
+                    </div>
+                    <div class="col-md-6 cart-total-value">
+                        {{totalPrice | currency :'INR':true}}
+                    </div>
+                </div>
+                <div class="cart-total-row row">
+                    <div class="col-md-6 cart-total-label">
+                        total
+                    </div>
+                    <div class="col-md-6 cart-total-value cart-total-price">
+                        {{totalPrice | currency :'INR':true}} AUD
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="cart-buttons">
+            <div class="continue-shopping"><a routerLink="/orderconfirmation">continue shopping</a></div>
+            <!-- <div ><a routerLink="/loginpage" class="checkout-button button button-primary button-large">Checkout ({{totalPrice | currency :'INR':true}})</a></div> -->
+            <div><li (click)="getImage(cartList)" class="checkout-button button button-primary button-large">Payment ({{totalPrice | currency :'INR':true}})</li></div>
+
+          
+     
+        </div>
+    </div>
+    <div class="cart-page-content" *ngIf="cartList.length == 0">
+        <h4>Your cart is empty.</h4>
+        <a routerLink="/">Go shopping</a>
+    </div>
+</div>
